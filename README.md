@@ -1,127 +1,79 @@
-# My-First-ANN-Project--Bengaluru-House-Price-Prediction
-# Bengaluru House Price Prediction (PyTorch ANN)
+# 🏠 Bengaluru House Price Prediction — ANN
 
-This project builds an Artificial Neural Network (ANN) using PyTorch to predict house prices in Bengaluru based on property features such as location, square footage, number of bedrooms, and bathrooms.
+## Overview
+My first ANN project built using PyTorch to predict house prices in Bengaluru.
+Started with a random dataset where every prediction was ₹254 Lakhs 😅 
+then switched to real Bengaluru data and built this.
 
-The project covers the complete machine learning workflow including data preprocessing, model training, evaluation, and deployment using Streamlit.
-
----
+## Results
+| Metric | Score |
+|--------|-------|
+| RMSE | 34.26 Lakhs |
+| MSE | 1173.71 |
+| R² | 66.32% |
 
 ## Tech Stack
-
-* Python
-* PyTorch
-* Pandas
-* NumPy
-* Scikit-learn
-* Streamlit
-
----
-
-## Model Performance
-
-The trained model was evaluated using common regression metrics:
-
-* **RMSE:** 37.82
-* **MAE:** 24.67
-* **R² Score:** 58.95%
-
----
+| Tool | Use |
+|------|-----|
+| Python | Core language |
+| PyTorch | Building and training ANN |
+| Pandas | Data cleaning and processing |
+| Scikit-learn | Encoding and scaling |
+| Streamlit | Model deployment |
 
 ## Project Structure
-
 ```
-bengaluru-house-price-ann/
-
-app.py
-bengaluru_housing_model.ipynb
-
-housing_model.pth
-scaler.pkl
-model_columns.json
-top_locations.json
-
-requirements.txt
-README.md
+├── bengaluru_house_data.csv           # Dataset
+├── bengaluru_housing_model.ipynb      # Main notebook
+├── app.py                             # Streamlit app
+├── housing_model.pth                  # Saved model weights
+├── scaler.pkl                         # Saved scaler
+├── model_columns.json                 # Feature columns
+├── top_locations.json                 # Top 40 locations
+└── README.md                          # This file
 ```
 
----
+## What I Learned
+- Data cleaning for real datasets
+- Handling messy columns like size and total_sqft
+- One-hot encoding and Label encoding
+- Building and training an ANN from scratch
+- What BatchNorm and Dropout actually do
+- Early stopping to prevent overfitting
+- Deploying a model with Streamlit
 
-## File Description
+## How to Run
 
-**app.py**
-Streamlit application that provides a user interface to input property details and receive predicted house prices.
-
-**bengaluru_housing_model.ipynb**
-Contains the full machine learning workflow including data preprocessing, feature engineering, model training, and evaluation.
-
-**housing_model.pth**
-Saved PyTorch model weights used for inference.
-
-**scaler.pkl**
-Saved feature scaler used during training to ensure consistent preprocessing during prediction.
-
-**model_columns.json**
-Stores the feature column structure used during training.
-
-**top_locations.json**
-Contains the most common locations used in the dataset for encoding and UI dropdown selection.
-
----
-
-## How to Run the Project
-
-### Clone the repository
-
+### 1. Clone the repo
 ```
-git clone https://github.com/yourusername/bengaluru-house-price-ann.git
-cd bengaluru-house-price-ann
+git clone your_repo_link
+cd your_repo_folder
 ```
 
-### Install dependencies
-
+### 2. Install dependencies
 ```
-pip install -r requirements.txt
+pip install torch pandas scikit-learn streamlit
 ```
 
-### Run the Streamlit application
+### 3. Run the notebook
+Open `bengaluru_housing_model.ipynb` and run all cells.
+This will generate the model files needed for the app.
 
+### 4. Launch the app
 ```
 streamlit run app.py
 ```
 
-The app will open in your browser where you can enter property details and receive predicted prices.
+## Dataset
+Bengaluru House Price Data — Kaggle  
+Link: https://www.kaggle.com/datasets/amitabhajoy/bengaluru-house-price-data
 
----
-
-## Features Used for Prediction
-
-* Location
-* Total Square Footage
-* Number of Bedrooms (BHK)
-* Number of Bathrooms
-
----
-
-## What I Learned
-
-* Building neural networks using PyTorch
-* Data cleaning and preprocessing for real-world datasets
-* Feature encoding and scaling
-* Preventing overfitting using Dropout and Early Stopping
-* Deploying machine learning models with Streamlit
-
----
-
-## Future Improvements
-
-* Feature engineering for improved performance
-* Comparing ANN with models like Random Forest or XGBoost
-* Adding visualization for training diagnostics
-* Hyperparameter tuning
-
----
+## Honest Note
+This is my first project. I took AI help for some improvements 
+and explored Streamlit during the project. I made sure I 
+understood every part before moving forward. Still learning — 
+especially data cleaning. Will improve with every project.
 
 ## Author
-
-Machine Learning beginner project focused on understanding neural networks, model training, and deployment.
+Vishnu
+Hyderabad, India
