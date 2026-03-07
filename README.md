@@ -6,11 +6,9 @@ Started with a random dataset where every prediction was ₹254 Lakhs 😅
 then switched to real Bengaluru data and built this.
 
 ## Results
-| Metric | Score |
-|--------|-------|
-| RMSE | 34.26 Lakhs |
-| MSE | 1173.71 |
-| R² | 66.32% |
+RMSE 34.26 
+MSE 1173.71
+R²  66.32% 
 
 ## Tech Stack
 | Tool | Use |
